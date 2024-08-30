@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      
+      // OBJETO ORIGINAL
+      let assinatura = {
+        idCliente: 1000,
+        descricao: 'Acesso a internet',
+        status() {
+          console.log('Ativo')
+        }
+      }
+      
+      // IMPRIME O OBJETIVO
+      console.log(assinatura.descricao)
+      
+      // A VARIÁVEL Y RECEBE A REFERENCIA DA VARIÁVEL 
+      // ASSINATURA NÃO É UMA CÓPIA DA VARIÁVEL ASSINATURA
+
+      // SENDO ASSIM POSSO ACESSAR ATRAVÉS DE Y OU ASSINATURA
+      let y = assinatura
+
+      console.log(y.descricao)
+
+      ///
+      y.descricao = 'Internet + tv + telefone'
+
+      console.log(assinatura.descricao)
+      console.log(y.descricao)
+
+    </script>
+    
+  </head>
+  <body>
+    
+  </body>
+</html>

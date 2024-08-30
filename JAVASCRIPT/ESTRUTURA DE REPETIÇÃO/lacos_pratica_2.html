@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+  
+
+  <script>
+
+    // tabuada do 1
+    // hardcode
+
+    for (var x = 1; x <= 10; x++) { // segundo laço
+      document.write('1 x ' + x + ' =   ' + (1 * x) + '<br />')
+    }
+    document.write('<hr />')
+
+    //-----------------------------------------------------------------
+    
+    // criar o laço x dentro do laço y
+    // laços encadeados
+    // laços de repetição dentro de outros laços de repetição
+    
+    for (var y = 1; y <= 10; y++) { // LAÇO SUPERIOR: Quero a tabuada de 1 até 10
+
+      for (var x = 1; x <= 10; x++) { // LAÇO INTERNO: Quero o resultado das tabuadas
+          document.write(y + ' x ' + x + ' = ' + (y * x) + '<br />');
+          // A cada iteração do laço interno, imprime o resultado da multiplicação de y e x
+      }
+      document.write('<hr />'); // Após completar a tabuada de um número, imprime uma linha horizontal para separar
+  
+  }
+  
+  // EXPLICAÇÃO DO LAÇO
+  
+  // LAÇO SUPERIOR: Y começa em 1 e vai até 10, incrementando 1 a cada iteração
+  // Em cada iteração do laço superior, o laço interno é executado
+  
+  // LAÇO INTERNO: X começa em 1 e vai até 10, incrementando 1 a cada iteração
+  // Em cada iteração do laço interno, o produto de Y e X é calculado e impresso
+  
+  // Quando o laço interno completa 10 iterações, ele termina e volta para o laço superior
+  // O valor de Y é incrementado e o laço interno é executado novamente com o novo valor de Y
+  
+  // Isso continua até que Y seja maior que 10, momento em que o laço superior termina e o programa para
+  
+    //escreve muito.
+    // for(var x = 1; x<=10; x++){
+    //   document.write('2 x' + x + ' = ' + (2 * x) + '<br />')
+    // }
+
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

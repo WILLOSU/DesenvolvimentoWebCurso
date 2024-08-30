@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      //propriedade length
+      //retorna a qtd de uma string
+      document.write('Jorge Sant Ana'.length)
+      
+      //retorna o caractere que pertence a este indice
+      // charAt renorta o índice
+      document.write('Jorge Sant Ana'.charAt(7))
+      
+      //propriedade  indexof retorna a posição da 1 ocorrência de um valor expecícifico dentro da string, ele faz diferenciação entre caracteres maíusculo e minúsculo, se for passado um caractere que não existe o retorno será -1      
+      var nome = 'Jorge Sant Ana'
+      document.write(nome.indexOf('g'))//posição 3
+      
+      //propriedade  replace permite com base em um valor de pesquisa e também em um outro valor de modificação substituir textos dentro de um string 
+      document.write(nome.replace('Sant Ana', 'Silva'))
+
+
+      //propriedade substr permite extrair parte de uma string com base em uma posição inicial seguinda de um valor que representa a quantidade de caracteres a frente daquela posição inicial. (como se recortasse)
+      document.write(nome.substr(6,4))
+      
+
+      //propriedade toLocaleLowerCase converte todos os caracteres de uma string para minusculo
+      // propriedade toLocaleUpperCase converte todos os caracteres de uma string para maisculo
+      document.write(nome.toLocaleLowerCase())
+      document.write(nome.toLocaleUpperCase())
+      
+      // propriedade trim remove os espaços em branco das extremidades string
+      document.write('-'+ nome.trim() + '-')
+    </script>
+    
+  </head>
+
+  <body>
+  </body>
+</html>

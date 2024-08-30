@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+    //classe é igual modelo de objeto, objeto é uma instancia do modelo
+
+    class ContaBancaria {
+        //agencia
+        //numeroConta
+        //saldo
+        //limite
+       
+       /* a classe precisa passar por um processo chamado instância, neste processo automaticamente ocorre
+       a construção de um objeto, e esse objeto pode ser 
+       utilizado dentro da nossa aplicação.
+
+       construtor é o método automático com as instruções 
+       que serão realizadas neste processo de construção de um objeto com base na classe.
+       
+       -------------------------------------------------------
+       O OPERADOR THIS tem a inteligência de fazer que 
+       o atributo seja conectado ao contexto do objeto da classe no momento de construção do objeto.
+
+       vamos ter uma variável que vai ficar ENCAPSULADA
+       dentro do objeto.
+
+       --------------------------------------------------------
+
+
+       */
+        constructor(){
+            this.agencia = 1075        
+            this.numeroConta = 8351125
+            this.saldo = 50
+            this.limite = 450
+        }
+        depositar(valor){
+            this.saldo += valor
+
+            //através do this recupero a variável saldo
+            //e vou atribuir ao saldo o valor do depósito
+            // seria o 50 + o que for digitado
+        }
+        sacar(valorSaque){
+            this.saldo -= valorSaque
+        }
+        consultarSaldo(){
+            return this.saldo
+        }
+    }
+    
+    // CRIAÇÃO DO OBJETO, precisamos dar a identidade
+    //  new é operador que indica para o interpletador
+    //  que eu quero na prática transformar este modelo
+    //  em um objeto, ou seja transforma essa classe
+    //  em um objeto que possa utilizar dentro do meu código.
+
+    
+    let x = new ContaBancaria() //contas diferentes
+    let y = new ContaBancaria() //contas diferentes
+
+    // dois objetos diferentes baseados em uma mesma classe.
+
+    console.log(x.consultarSaldo())
+    x.depositar(450)
+    console.log(x.consultarSaldo())
+    x.sacar(200)
+    console.log(x.consultarSaldo())
+
+    console.log(y.consultarSaldo())
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

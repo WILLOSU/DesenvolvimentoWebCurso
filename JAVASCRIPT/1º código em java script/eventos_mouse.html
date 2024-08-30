@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+   
+   <script>
+      
+    // quando o elemento é clicado
+    // onclick
+    
+      function acao(){
+        alert('Evento disparado')
+      }
+      
+     // quando o elemento é clicado duas vezes
+    // ondblclick
+     function acao1(){
+       alert('Elemento foi cliclado')
+     }
+
+      // quando o elemento aparece apenas quando o mouse deixa de ser pressionado
+    // onmouseup
+     function acao2(){
+       alert('O cursor do mouse deixou a região do elemento')
+     }
+
+
+     // quando o mouse sobrepor a região aparece o alert
+    // onmouseover
+    function acao3(){
+      alert('mouse sobrepor a região aparece o alert')
+    }
+
+    function acao4(){
+      alert('mouse sai da região aparece o alert')
+    }
+
+    </script>
+    
+  </head>
+
+  <body>
+    <!-- <div onclick="acao()" style="background-color: #ccc; height: 150px; width: 150px;"></div> -->
+    <!-- <div ondblclick="acao()" style="background-color: #ccc; height: 150px; width: 150px;"></div> -->
+    <!-- <div onmouseup="acao()" style="background-color: #ccc; height: 150px; width: 150px;"></div> -->
+    <!-- <div onmouseover="acao()" style="background-color: #ccc; height: 150px; width: 150px;"></div> -->
+    <!-- <div onmouseout="acao()" style="background-color: #ccc; height: 150px; width: 150px;"></div> -->
+   
+   
+    <div onmousover="acao()" onmouseover="acao3()" style="background-color: #ccc; height: 150px; width: 150px;"></div>
+  </body>
+</html>

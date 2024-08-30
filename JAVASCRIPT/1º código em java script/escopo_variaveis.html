@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      //3 escopos: global, função e o bloco
+
+      /*  escopo de função e escopo de bloco visualizam
+          variáveis do escopo global
+
+
+          variáveis declarada dentro do escopo de bloco
+          sofrem elevação sofre roistem, se o escopo de bloco estiver dentro do escopo de função 
+          a variável também sofrerá elevação, porém para o 
+          escopo da função.
+
+          variáveis declarada dentro do escopo de função
+          NÃO SOFRERÁ elevação    
+
+
+
+      */
+
+      var serie = 'Friends'
+
+      if(true){
+        var serie2 = 'Game of Thrones'
+        document.write(serie)
+      }
+      
+      document.write(serie2)
+
+      document.write('<br />')
+
+      function x(){
+        var serie3 = 'The Walking Dead'
+        document.write(serie)
+        document.write(serie2)
+      }
+
+      x() 
+
+      document.write('<br />')
+      document.write(serie3) //não renderiza
+    </script>
+    
+  </head>
+
+  <body>
+  </body>
+</html>

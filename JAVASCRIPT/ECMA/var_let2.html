@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        var serie = 'Friends'
+        {
+
+            // é feito um roystem do escopo de bloco para o escopo global por utilizar o var e este roystem sobrescreve o valor da váriavel, fazendo com que os consoles apresente a última informação atribuida a variável
+            var serie = "The Walking Dead"
+            console.log('dentro do bloco: ' + serie)
+        }
+        console.log('fora do bloco: ' + serie)
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+
+
+  <script>
+    // var listaConvidados = ['Jorge', 'Jamilton', 'José', 'Ana', 'Maria']
+
+    var listaConvidados = Array()
+
+    listaConvidados['a'] = 'Jorge'
+    listaConvidados[10] = 'Jamilton'
+    listaConvidados['zebra'] = 'José'
+    listaConvidados[-1] = 'Ana'
+    listaConvidados[true] = 'Maria'
+    console.log(listaConvidados)
+
+    // for ( in ){}
+
+    for(var x in listaConvidados){
+      console.log('Índice ' + x + ' valor ' + listaConvidados[x])
+    }
+   // o in até o final do array o critério de parada é o undefind do indice de um array
+
+
+   // permite que navegue por elementos do array que tenha chaves customizadas não sequenciais
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

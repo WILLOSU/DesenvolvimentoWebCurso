@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .result {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        .separator {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function showMultiplicationTable() {
+            const outputDiv = document.getElementById('output');
+
+            for (let y = 1; y <= 10; y++) { // LAÇO SUPERIOR: Quero a tabuada de 1 até 10
+                for (let x = 1; x <= 10; x++) { // LAÇO INTERNO: Quero o resultado das tabuadas
+                    const result = document.createElement('div');
+                    result.className = 'result';
+                    result.innerText = `${y} x ${x} = ${y * x}`;
+                    outputDiv.appendChild(result);
+                    await sleep(500); // Espera 0.5 segundos antes de mostrar o próximo resultado
+                }
+                const separator = document.createElement('div');
+                separator.className = 'separator';
+                outputDiv.appendChild(separator);
+            }
+        }
+
+        showMultiplicationTable();
+    </script>
+</body>
+</html>
